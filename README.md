@@ -1,3 +1,3 @@
-# dicoding-submission-webdasar
+# dicoding-webdasar
 
-WEB sederhana sebagai tugas akhir pada kelas Belajar Dasar Pemrograman Web di Dicoding. 
+WEB sederhana sebagai submission tugas akhir pada kelas Belajar Dasar Pemrograman Web di Dicoding. 
