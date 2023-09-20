@@ -1,0 +1,261 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Quicksand:wght@500;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #062863;
+}
+
+/* smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Navbar */
+header.navbar-container {
+    margin-inline: auto;
+    padding-block: 1rem;
+    background-color: #062863;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header.navbar-container .nav-list ul{
+    padding-left: 0;
+    display: flex;   
+    justify-content: center;
+    gap: 2rem;
+}
+
+header.navbar-container .nav-list li{
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #5584AC;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a{
+    color: white;
+    text-shadow: 1px 1px 4px white;
+    padding-block: 0.2rem;
+    border-bottom: 2px solid  #F6F2D4;
+}
+/* End of navbar */
+
+/* Main Content */
+main{
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    padding-inline: 20px;
+}
+
+main .content{
+    flex: 1.5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+main .content .card{
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+main .content .card:hover{
+    box-shadow: 0 0 10px 0 rgba(255, 252, 252, 0.5);
+}
+
+main .content .title, p{
+    color: #062863;
+    text-align: justify;
+}
+
+main .content .card-item{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+main .content .card-item .year{
+    flex: 1;
+}
+
+main .content .card-item .item{
+    flex: 3;
+}
+
+main .content .card-item .item h3, p{
+    margin: 0;
+}
+
+main .content #education .card-item .year{
+    margin-top: 5px;
+    text-align: end;
+}
+
+main .content .card-item .description{
+    color: rgba(6, 40, 99, 0.747)
+}
+
+main .content .card-item .btn-group{
+    margin-block: 10px;
+}
+
+main .content .card-item .btn{
+    text-decoration: none;
+    margin-right: 8px;
+    padding: 5px 10px;
+    background-color: #062863;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+}
+
+main .content .card-item .btn:hover{
+    box-shadow: 0 0 10px 0 rgba(6, 40, 99, 0.5);
+}
+
+/* Aside Biodata */
+main aside{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: sticky;
+    top: 95px;
+    height: 80vh;
+}
+
+main aside .biodata-img{
+    display: flex;    
+    justify-content: end;
+}
+
+main aside .biodata-img img{
+    width: 80%;
+    border-radius: 100%;
+}
+
+main aside .biodata-description{
+    flex-grow: 2;
+    align-self: end;
+}
+
+main aside .biodata-description .name, .position{
+    margin-block: 0;
+    color: white;
+    text-align: end;
+}
+
+main aside .biodata-description .name{
+    font-size: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+main aside .biodata-description .position{
+    font-size: 1rem;
+}
+
+main aside .social-media{
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+main aside .social-media ul{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+main aside .social-media li{
+    list-style-type: none;
+}
+
+main aside .social-media li a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+
+main aside .social-media li a:hover{
+    color: #5584AC;
+}
+
+/* End Aside Biodata */
+/* End Main Content */
+
+/* Footer */
+footer p{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main aside{
+        order: -1;
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    main aside .biodata-img{
+        justify-content: center;
+    }
+
+    main aside .biodata-img img{
+        width: 50%;
+    }
+
+    main aside .biodata-description{
+        align-self: center;
+    }
+
+    main aside .biodata-description .name, .position{
+        text-align: center;
+    }
+
+    main aside .social-media{
+        justify-content: center;
+    }
+
+    /* main .content{
+        margin-top: 5rem;
+    } */
+}
